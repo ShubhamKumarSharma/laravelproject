@@ -17,3 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//Route::post('/todo', function() {
+//	return post::create({
+//
+//		'title' => request('task'),
+//		'content' => request('user_id'),
+//	});
+//});
+
+Route::post("/todo/add",[taskcontroller::class,'tasks']);
+//Route::post("/todo/status"[taskcontroller::class,'')
